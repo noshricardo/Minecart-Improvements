@@ -1,4 +1,4 @@
-package com.example;
+package com.nosh;
 
 import net.fabricmc.api.ClientModInitializer;
 
