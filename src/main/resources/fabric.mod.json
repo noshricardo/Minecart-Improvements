@@ -17,9 +17,6 @@
 	"entrypoints": {
 		"main": [
 			"com.nosh.MinecartImprovements"
-		],
-		"client": [
-			"com.example.ExampleModClient"
 		]
 	},
 	"mixins": [
