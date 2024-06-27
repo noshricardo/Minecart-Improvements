@@ -32,7 +32,7 @@ public class MinecartMixin {
 
     @Redirect(method = "moveOnRail", at = @At(value = "INVOKE", target = "Lnet/minecraft/block/BlockState;isOf(Lnet/minecraft/block/Block;)Z"))
     private boolean allowFastRails(BlockState state, Block block){
-        return  state.isOf(Blocks.POWERED_RAIL) || (block instanceof FastRail);
+        return  state.isOf(Blocks.POWERED_RAIL) || state.isOf(new FastRail(AbstractBlock.Settings.create().noCollision()));
     }
 
 

@@ -6,13 +6,11 @@ import eu.pb4.polymer.core.api.item.PolymerBlockItem;
 import eu.pb4.polymer.core.api.utils.PolymerRegistry;
 import net.fabricmc.api.ModInitializer;
 
+import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
 import net.minecraft.block.AbstractBlock;
 import net.minecraft.block.Block;
 import net.minecraft.block.PoweredRailBlock;
-import net.minecraft.item.BlockItem;
-import net.minecraft.item.Item;
-import net.minecraft.item.Items;
-import net.minecraft.item.PickaxeItem;
+import net.minecraft.item.*;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
 import net.minecraft.registry.tag.BlockTags;
@@ -39,6 +37,10 @@ public class MinecartImprovements implements ModInitializer {
 
 		Registry.register(Registries.BLOCK, Identifier.of("minecart-improvements", "fast_rail"), FAST_RAIL);
 		Registry.register(Registries.ITEM, Identifier.of("minecart-improvements", "fast_rail"), new PolymerBlockItem(FAST_RAIL, new Item.Settings(), Items.POWERED_RAIL));
+
+//		ItemGroupEvents.modifyEntriesEvent(ItemGroups.REDSTONE).register(content -> {
+//			content.addAfter(Items.RAIL, new BlockItem(new FastRail(AbstractBlock.Settings.create()), new Item.Settings()));
+//		});
 		// This code runs as soon as Minecraft is in a mod-load-ready state.
 		// However, some things (like resources) may still be uninitialized.
 		// Proceed with mild caution.
