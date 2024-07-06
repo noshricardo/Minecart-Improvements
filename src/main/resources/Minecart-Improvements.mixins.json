@@ -3,7 +3,8 @@
   "package": "com.nosh.mixin",
   "compatibilityLevel": "JAVA_21",
   "mixins": [
-    "MinecartMixin"
+    "MinecartMixin",
+    "MinecartItemMixin"
   ],
   "injectors": {
     "defaultRequire": 1

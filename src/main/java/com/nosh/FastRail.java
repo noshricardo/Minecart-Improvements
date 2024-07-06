@@ -7,7 +7,7 @@ import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.gen.chunk.BlockColumn;
 
 public class FastRail extends PoweredRailBlock implements PolymerBlock {
-    public FastRail(Settings settings) {
+    public FastRail(AbstractBlock.Settings settings) {
         super(settings);
     }
 

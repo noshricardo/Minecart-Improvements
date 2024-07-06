@@ -1,0 +1,7 @@
+{
+  "replace": false,
+  "values": [
+    "minecraft:powered_rail",
+    "minecart-improvements:fast_rail"
+  ]
+}

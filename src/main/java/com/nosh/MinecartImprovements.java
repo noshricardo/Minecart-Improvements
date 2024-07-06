@@ -32,6 +32,12 @@ public class MinecartImprovements implements ModInitializer {
 	public static final FastRail FAST_RAIL = new FastRail(AbstractBlock.Settings.create().noCollision());
 	//public static final Block FAST_RAIL = new PoweredRailBlock(AbstractBlock.Settings.create().noCollision());
 
+
+	//public static final TagKey<Block> TAG_POWERED_RAILS = TagKey.of(
+	//		Registry.BLOCK_KEY, new Identifier("diamondrails", "powered_rails")
+	//);
+
+
 	@Override
 	public void onInitialize() {
 
