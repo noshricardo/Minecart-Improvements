@@ -43,7 +43,7 @@ public abstract class MinecartMixin extends Entity{
         if(instance.getWorld().getBlockState(instance.getBlockPos()).isOf(MinecartImprovements.FAST_RAIL)){
             return (double) 0.4;
         }
-        return (instance.isTouchingWater() ? 4.0 : 8.0) * 20;
+        return (instance.isTouchingWater() ? 4.0 : 8.0) / 20;
         //return (double) 0.2;
     }
 
@@ -101,9 +101,9 @@ public abstract class MinecartMixin extends Entity{
 
     }
     */
-    @Redirect(method = "moveOffRail", at = @At(value = "INVOKE", target = "getMaxSpeed()D"))
+    @Redirect(method = "moveOffRail", at = @At(value = "INVOKE", target = "Lnet/minecraft/entity/vehicle/AbstractMinecartEntity;getMaxSpeed()D"))
     private double changeMaxOffRailSpeed(AbstractMinecartEntity instance){
-        return (instance.isTouchingWater() ? 4.0 : 8.0) * 1000;
+        return (instance.isTouchingWater() ? 4.0 : 8.0) / 20;
     }
 
     @Redirect(method = "moveOnRail", at = @At(value = "INVOKE", target = "Lnet/minecraft/block/BlockState;isOf(Lnet/minecraft/block/Block;)Z"))
