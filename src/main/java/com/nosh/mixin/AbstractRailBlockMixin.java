@@ -29,5 +29,16 @@ public class AbstractRailBlockMixin {
         return false;
     }
 
+    @Redirect(method = "onBlockAdded", at = @At(value = "INVOKE", target = "Lnet/minecraft/block/BlockState;isOf(Lnet/minecraft/block/Block;)Z"))
+    public boolean isOfMixin2(BlockState instance, Block block){
+        if(instance.isOf(block) || instance.isOf(MinecartImprovements.FAST_RAIL)){
+            return true;
+        }
+        return false;
+    }
+
+
+
+
 
 }

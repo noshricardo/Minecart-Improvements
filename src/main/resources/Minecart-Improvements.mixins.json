@@ -5,7 +5,8 @@
   "mixins": [
     "MinecartMixin",
     "MinecartItemMixin",
-    "AbstractRailBlockMixin"
+    "AbstractRailBlockMixin",
+    "PoweredRailBlockMixin"
   ],
   "injectors": {
     "defaultRequire": 1
